@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cyber Oracle - Draw the Answer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;400;600;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#000000",
+                        "surface-variant": "#262626",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary-fixed-variant": "#4b0069",
+                        "surface": "#0e0e0e",
+                        "primary-container": "#d779ff",
+                        "primary-dim": "#b90afc",
+                        "on-surface": "#ffffff",
+                        "inverse-on-surface": "#565555",
+                        "on-secondary": "#49000a",
+                        "tertiary-fixed": "#ffd709",
+                        "secondary-dim": "#e90036",
+                        "on-tertiary-fixed": "#453900",
+                        "on-tertiary-container": "#5b4b00",
+                        "outline": "#767575",
+                        "inverse-primary": "#9900d1",
+                        "secondary-fixed-dim": "#ffafae",
+                        "on-error-container": "#ffb2b9",
+                        "error-container": "#a70138",
+                        "on-surface-variant": "#adaaaa",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary-fixed": "#000000",
+                        "primary-fixed-dim": "#cf62ff",
+                        "tertiary": "#ffe792",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "on-error": "#490013",
+                        "on-secondary-fixed-variant": "#a50023",
+                        "surface-tint": "#de8eff",
+                        "secondary-fixed": "#ffc3c1",
+                        "tertiary-fixed-dim": "#efc900",
+                        "outline-variant": "#484847",
+                        "surface-container-low": "#131313",
+                        "on-secondary-container": "#fff6f5",
+                        "surface-container-high": "#201f1f",
+                        "surface-container": "#1a1919",
+                        "secondary-container": "#bf002a",
+                        "on-background": "#ffffff",
+                        "on-primary-container": "#3d0056",
+                        "on-primary": "#4f006e",
+                        "surface-container-highest": "#262626",
+                        "background": "#0e0e0e",
+                        "primary": "#de8eff",
+                        "on-secondary-fixed": "#6f0014",
+                        "secondary": "#ff7073",
+                        "on-tertiary": "#655400",
+                        "tertiary-container": "#ffd709",
+                        "primary-fixed": "#d779ff",
+                        "tertiary-dim": "#efc900",
+                        "error": "#ff6e84",
+                        "error-dim": "#d73357",
+                        "inverse-surface": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ritual-gradient {
+            background: radial-gradient(circle at center, rgba(185, 10, 252, 0.15) 0%, transparent 70%);
+        }
+        .particle-bg {
+            background-image: radial-gradient(rgba(222, 142, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 min-h-screen flex flex-col overflow-x-hidden">
+<!-- Energy Ripples & Background Context -->
+<div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+<div class="absolute inset-0 particle-bg opacity-30"></div>
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-dim/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-secondary-container/10 rounded-full blur-[100px]"></div>
+<div class="ritual-gradient absolute inset-0"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-fuchsia-500 hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h1 class="font-['Space_Grotesk'] tracking-widest uppercase font-bold text-2xl font-black tracking-tighter text-fuchsia-500 drop-shadow-[0_0_10px_rgba(188,19,254,0.8)]">CYBER ORACLE</h1>
+</div>
+<div class="relative group">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="Oracle Initiate" class="w-full h-full object-cover" data-alt="abstract cosmic portrait of a digital entity with glowing purple highlights and geometric patterns on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlnw9x3ydt43t55fNZ1m8-HR0WgrFXSBcJae5-19igH94RNHqM7Ymk2hskEbkJRJeOeGlPrl4a7aJncDUjVe7iTGQDCM1AHoHN0gWSOF7GLphIZBRWM3Kf5SasCp9-9bUSNKX5fkFoHg0UK_bGLRl4JinJwLyUXWN8ZivNSI2JXZI_pvFL0oansvo8l6rKsezrsPl4qPhbjDTTGk7ryfQA3kvuv3aQ9u2yx7w63JY17530bMgUVOv7to9XhINSpvSIIB86dDFZqq8"/>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 bg-gradient-to-b from-fuchsia-500/10 to-transparent h-px w-full"></div>
+</header>
+<main class="relative z-10 flex-grow flex flex-col items-center justify-center px-6 pt-24 pb-12">
+<div class="w-full max-w-2xl mx-auto space-y-12">
+<!-- The Oracle Portal / Input Section -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary-dim rounded-lg blur opacity-20 group-focus-within:opacity-40 transition duration-1000 group-focus-within:duration-200"></div>
+<div class="relative space-y-2">
+<label class="font-headline text-xs tracking-[0.3em] uppercase text-on-surface-variant/60 ml-2" for="oracle-input">Consult the Void</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary/50 focus:ring-0 text-3xl md:text-5xl font-headline font-bold text-on-surface placeholder:text-surface-variant transition-all py-6 resize-none" id="oracle-input" placeholder="Type what you want to ask..." rows="3"></textarea>
+</div>
+</div>
+<!-- Example Prompts (Asymmetrical Editorial Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+<div class="space-y-4">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40">Inspirations for your ritual</p>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded-full bg-surface-container-low border border-outline-variant/10 text-on-surface-variant hover:text-primary hover:border-primary/30 transition-all text-sm font-medium">
+                            "Does he like me?"
+                        </button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low border border-outline-variant/10 text-on-surface-variant hover:text-primary hover:border-primary/30 transition-all text-sm font-medium">
+                            "Should I quit my job?"
+                        </button>
+<button class="px-6 py-3 rounded-full bg-surface-container-low border border-outline-variant/10 text-on-surface-variant hover:text-primary hover:border-primary/30 transition-all text-sm font-medium">
+                            "When will I be rich?"
+                        </button>
+</div>
+</div>
+<div class="text-right hidden md:block">
+<p class="font-body text-xs text-on-surface-variant/30 italic leading-relaxed">
+                        The answers lie beyond the screen.<br/>Focus your intent. Breathe into the void.
+                    </p>
+</div>
+</div>
+<!-- Main Action -->
+<div class="flex flex-col items-center pt-8">
+<button class="group relative px-12 py-6 bg-primary rounded-lg overflow-hidden transition-all active:scale-95 duration-200 shadow-[0_0_40px_rgba(185,10,252,0.3)]">
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-dim opacity-100 group-hover:opacity-90"></div>
+<div class="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-45deg] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+<span class="relative flex items-center gap-3 font-headline font-black text-on-primary text-xl tracking-widest uppercase">
+                        Draw the Answer
+                        <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">flare</span>
+</span>
+</button>
+<div class="mt-6 font-label text-[10px] tracking-[0.4em] uppercase text-primary-dim/60 animate-pulse">
+                    Awaiting Connection
+                </div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Suppressed for focused task, but kept placeholder structure if needed for top destinations) -->
+<!-- Suppressed based on "Task-Focused" rule: Page contains a focused entry task -->
+<!-- Decorative Card (Editorial Element) -->
+<div class="fixed bottom-12 right-12 hidden lg:block w-48 opacity-40">
+<div class="aspect-[3/4] bg-surface-container-high rounded-xl overflow-hidden border border-white/5 relative group hover:opacity-100 transition-opacity">
+<img alt="Tarot Inspiration" class="w-full h-full object-cover" data-alt="digital art of a minimalist tarot card featuring a glowing purple orb suspended in a dark obsidian chamber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAthBzbkdilq-kbtzPBlRaLUsLcN4qWSTRhRCvafEYvGwyyg0uUAsuUUduvfHZZdqICjuZmHdfiSiiNaaj564dANYawTyNjTezOe6E0L1Oy-_u77QA7pIdWEbST488TNvliMicInwnqDkABQOoFcoK9fSDYO5b6SmjhVWBg30v2SdqKHIlLaZeLNs1K6z2VnnQWRP0BdRukGQ_VKJ2EdCmWKbf8JQ5nkm7PmSdGzc3kOL9Bu2gtH_QzJnzpo2qPCc3wN1CX8H51XqE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<div class="font-headline text-[10px] tracking-tighter uppercase text-primary">The Visionary</div>
+<div class="h-0.5 w-8 bg-primary mt-1"></div>
+</div>
+</div>
+</div>
+</body></html>

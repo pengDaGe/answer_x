@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#000000",
+                        "surface-variant": "#262626",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary-fixed-variant": "#4b0069",
+                        "surface": "#0e0e0e",
+                        "primary-container": "#d779ff",
+                        "primary-dim": "#b90afc",
+                        "on-surface": "#ffffff",
+                        "inverse-on-surface": "#565555",
+                        "on-secondary": "#49000a",
+                        "tertiary-fixed": "#ffd709",
+                        "secondary-dim": "#e90036",
+                        "on-tertiary-fixed": "#453900",
+                        "on-tertiary-container": "#5b4b00",
+                        "outline": "#767575",
+                        "inverse-primary": "#9900d1",
+                        "secondary-fixed-dim": "#ffafae",
+                        "on-error-container": "#ffb2b9",
+                        "error-container": "#a70138",
+                        "on-surface-variant": "#adaaaa",
+                        "surface-dim": "#0e0e0e",
+                        "on-primary-fixed": "#000000",
+                        "primary-fixed-dim": "#cf62ff",
+                        "tertiary": "#ffe792",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "on-error": "#490013",
+                        "on-secondary-fixed-variant": "#a50023",
+                        "surface-tint": "#de8eff",
+                        "secondary-fixed": "#ffc3c1",
+                        "tertiary-fixed-dim": "#efc900",
+                        "outline-variant": "#484847",
+                        "surface-container-low": "#131313",
+                        "on-secondary-container": "#fff6f5",
+                        "surface-container-high": "#201f1f",
+                        "surface-container": "#1a1919",
+                        "secondary-container": "#bf002a",
+                        "on-background": "#ffffff",
+                        "on-primary-container": "#3d0056",
+                        "on-primary": "#4f006e",
+                        "surface-container-highest": "#262626",
+                        "background": "#0e0e0e",
+                        "primary": "#de8eff",
+                        "on-secondary-fixed": "#6f0014",
+                        "secondary": "#ff7073",
+                        "on-tertiary": "#655400",
+                        "tertiary-container": "#ffd709",
+                        "primary-fixed": "#d779ff",
+                        "tertiary-dim": "#efc900",
+                        "error": "#ff6e84",
+                        "error-dim": "#d73357",
+                        "inverse-surface": "#fcf9f8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .savage-glow {
+            text-shadow: 0 0 15px rgba(233, 0, 54, 0.8), 0 0 30px rgba(233, 0, 54, 0.4);
+        }
+        .glass-card {
+            background: linear-gradient(135deg, rgba(38, 38, 38, 0.4) 0%, rgba(14, 14, 14, 0.8) 100%);
+            backdrop-filter: blur(24px);
+        }
+        .poster-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(222, 142, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(233, 0, 54, 0.15) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-xl">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-fuchsia-500" data-icon="flare">flare</span>
+<span class="text-2xl font-black tracking-tighter text-fuchsia-500 drop-shadow-[0_0_10px_rgba(188,19,254,0.8)] font-['Space_Grotesk'] uppercase">CYBER ORACLE</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a tech-savvy user with neon blue lighting on their face, cyber-initiate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDcA0W48xiv-rS9FIoEtWahbpUG665opqt7pEWNwoz6H_miiFKKeOJpWPeZ264lmDFjZzE_pU-wIlNQXD7a30Ms57mFokBEnjwKWM8cpuWrxm-th_Xw5f_F_GINhE20nvy-UMiSzZw72ko0tRRp-j-pKvpWoDKL57kVO7ipzsmB4GXmjMis25TjwgJUF_qyDE4Tt3Ituus-iYVX253Tgfc5eVls7LCqgFYd71GLldTc95E9qyFv-43GIZ4b9FLY-4lX8AAbXqEJbI"/>
+</div>
+</div>
+<div class="bg-gradient-to-b from-fuchsia-500/10 to-transparent h-px w-full"></div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-lg mx-auto flex flex-col gap-8 poster-mesh">
+<!-- Savage Mode Header -->
+<div class="flex justify-center">
+<div class="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-secondary-dim/30 bg-secondary-dim/10">
+<span class="w-2 h-2 rounded-full bg-secondary-dim animate-pulse"></span>
+<span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-secondary-dim savage-glow">Savage Mode</span>
+</div>
+</div>
+<!-- The Poster Container (Social Shareable) -->
+<div class="relative group" id="poster-card">
+<!-- Background Image Layer -->
+<div class="absolute inset-0 rounded-xl overflow-hidden opacity-30 grayscale mix-blend-overlay">
+<img alt="Cinematic Abstract" class="w-full h-full object-cover" data-alt="Abstract dark cinematic background with floating digital particles and deep red and purple lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDTIwfdSPT3eRUy6zuCwKhE2zGWQm_7EnchN_gNSfvOtqQHPcFvx-8rBi5rkUvcGJY7CRvXkmkO96iN_CGqAw6M7PkiD9UpvB1PamX_ZRatD_ftPIxXD2l9v3FPzMXkJh_XlNH8E6Q19byQYL8cXTYjIZHyTyB_Giywm4NwOA0Gw2eup99zVJ4HAJQKQUE2IncckXmabBo5YZaC3J_x_IOaZqDY42TzHr2o6Nm_G1bjIt8Hw0itK4J2sEKcSslvDnqT2uN6QDtBA4"/>
+</div>
+<!-- Glassmorphism Shell -->
+<div class="glass-card rounded-xl border border-white/5 p-8 flex flex-col gap-12 relative z-10 shadow-2xl">
+<!-- Branding Context -->
+<div class="flex justify-between items-start opacity-60">
+<div class="font-headline font-bold text-xs uppercase tracking-widest text-primary">AnswerX / v2.4</div>
+<div class="font-label text-[10px] text-surface-variant">TOKEN: 0XF42A...199</div>
+</div>
+<!-- User Question -->
+<div class="flex flex-col gap-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">User Inquiry</span>
+<h2 class="font-headline text-2xl font-light text-on-surface-variant italic">
+                        "Should I quit my job?"
+                    </h2>
+</div>
+<!-- The Oracle Response -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-secondary-dim/50 to-transparent"></div>
+<span class="material-symbols-outlined text-secondary-dim" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-secondary-dim/50 to-transparent"></div>
+</div>
+<div class="relative">
+<span class="absolute -top-10 -left-4 text-7xl font-serif text-secondary-dim/10 pointer-events-none">“</span>
+<h1 class="font-headline text-5xl font-black text-on-surface leading-[0.95] tracking-tighter uppercase break-words">
+                            You don't want to <span class="text-secondary-dim savage-glow">quit</span>, you just want a <span class="text-primary-container">raise</span>.
+                        </h1>
+<span class="absolute -bottom-10 -right-4 text-7xl font-serif text-secondary-dim/10 pointer-events-none rotate-180">“</span>
+</div>
+</div>
+<!-- Footer Metadata -->
+<div class="pt-8 flex justify-between items-end border-t border-white/5">
+<div class="flex flex-col gap-1">
+<span class="font-headline font-bold text-lg text-on-surface tracking-tighter">CYBER ORACLE</span>
+<span class="font-label text-[9px] uppercase tracking-[0.3em] text-outline">Sanctuary of Truth</span>
+</div>
+<div class="text-right">
+<div class="w-12 h-12 ml-auto mb-2 opacity-50">
+<img alt="App QR" class="w-full h-full object-contain rounded-md" data-alt="Stylized QR code graphic for a futuristic cyberpunk application interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_v6rL3sHFrRbvmTM424xBucaqp0JROLu1xdHD7YgGr2t7r8dp9xZCEzsxmT_7r8LbatuW0536nF-9WUAdPPDFhsS9Xh0yobwhAmINuot0vucJCBqucT7sNXgsSp91FHaH99JRpvylCkpbJUihyxa4jZs7xKh5QJ_fVRQLROOZ_XmDevocozjyb96I4MdC9Rwxe_B6qkT8AvvoILE_Tlf2OgH3ee_UWF7rW5xTdEhKQdyQCrs8UzCA8XRVsL8r7PKnISs1hO-uxxc"/>
+</div>
+<span class="font-label text-[8px] text-surface-variant uppercase">Verify on Blockchain</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Grid (Buttons) -->
+<div class="grid grid-cols-2 gap-4">
+<button class="col-span-2 flex items-center justify-center gap-3 py-5 rounded-lg bg-primary text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:opacity-90 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="refresh">refresh</span>
+                Ask Again
+            </button>
+<button class="flex items-center justify-center gap-2 py-4 rounded-lg bg-surface-container-high border border-white/10 font-label font-semibold text-xs uppercase tracking-wider text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="tune">tune</span>
+                Version
+            </button>
+<button class="flex items-center justify-center gap-2 py-4 rounded-lg bg-surface-container-high border border-white/10 font-label font-semibold text-xs uppercase tracking-wider text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="download">download</span>
+                Save Image
+            </button>
+<button class="col-span-2 flex items-center justify-center gap-3 py-4 rounded-lg border-2 border-primary-dim/30 bg-primary-dim/5 text-primary-dim font-headline font-bold uppercase tracking-widest text-xs hover:bg-primary-dim/10 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                Share with Friends
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#0D0D0D]/40 backdrop-blur-lg flex justify-around items-center px-4 pb-8 pt-4 rounded-t-[2rem] border-t border-white/10 shadow-[0_-10px_40px_rgba(188,19,254,0.15)]">
+<a class="flex flex-col items-center justify-center text-zinc-600 hover:text-fuchsia-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-fuchsia-400 drop-shadow-[0_0_8px_rgba(188,19,254,0.6)] hover:text-fuchsia-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-widest mt-1">Void</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-600 hover:text-fuchsia-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-widest mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-600 hover:text-fuchsia-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Content Bleed/Background Atmosphere -->
+<div class="fixed top-1/4 -left-32 w-64 h-64 bg-primary-dim/20 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<div class="fixed bottom-1/4 -right-32 w-64 h-64 bg-secondary-dim/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+</body></html>
