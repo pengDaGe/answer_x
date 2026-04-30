@@ -16,10 +16,10 @@
 		A1B2C3D4E5F600000000002C /* AnswerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F600000000002D /* AnswerDetailView.swift */; };
 		A1B2C3D4E5F6000000000033 /* AnswerResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6000000000034 /* AnswerResultView.swift */; };
 		A1B2C3D4E5F6000000000039 /* AnswerTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F600000000003A /* AnswerTransitionView.swift */; };
+		A1B2C3D4E5F600000000003F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F600000000000D /* Assets.xcassets */; };
+		A1B2C3D4E5F6000000000041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6000000000040 /* LaunchScreen.storyboard */; };
 		A1B2C3D4E5F6000000000042 /* OracleHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6000000000043 /* OracleHistoryStore.swift */; };
 		A1B2C3D4E5F6000000000044 /* OracleFavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6000000000045 /* OracleFavoritesStore.swift */; };
-		A1B2C3D4E5F6000000000041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6000000000040 /* LaunchScreen.storyboard */; };
-		A1B2C3D4E5F600000000003F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F600000000000D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -389,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"answer_x/Preview Content\"";
-				DEVELOPMENT_TEAM = 2K6U55SE85;
+				DEVELOPMENT_TEAM = Y9TBPUJMQR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = AnswerX;
@@ -425,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"answer_x/Preview Content\"";
-				DEVELOPMENT_TEAM = 2K6U55SE85;
+				DEVELOPMENT_TEAM = Y9TBPUJMQR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = AnswerX;

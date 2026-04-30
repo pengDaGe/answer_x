@@ -16,24 +16,24 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     activeTopBar
 
-                    Group {
+                    ZStack {
                         if selectedTab == .history && historyStore.entries.isEmpty {
                             pageContent
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
                         } else {
                             ScrollView(showsIndicators: false) {
                                 pageContent
                             }
                         }
                     }
-                    .safeAreaInset(edge: .bottom) {
-                        OracleBottomNavigation(mode: mode, selected: selectedTab) { tab in
-                            withAnimation(.spring(response: 0.36, dampingFraction: 0.86)) {
-                                selectedTab = tab
-                            }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+                .safeAreaInset(edge: .bottom) {
+                    OracleBottomNavigation(mode: mode, selected: selectedTab) { tab in
+                        withAnimation(.spring(response: 0.36, dampingFraction: 0.86)) {
+                            selectedTab = tab
                         }
-                            .padding(.bottom, OracleSpacing.xs)
                     }
+                        .padding(.bottom, OracleSpacing.xs)
                 }
             }
             .toolbar(.hidden, for: .navigationBar)
@@ -654,9 +654,7 @@ private struct HistoryEmptyStateView: View {
     let onStartDivination: () -> Void
 
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer(minLength: 36)
-
+        VStack(spacing: OracleSpacing.xxl) {
             ZStack {
                 Circle()
                     .fill(OracleColor.primaryDim.opacity(0.12))
@@ -691,7 +689,6 @@ private struct HistoryEmptyStateView: View {
                     .blur(radius: 1.2)
                     .offset(x: 68, y: 66)
             }
-            .padding(.bottom, OracleSpacing.xxxl)
 
             VStack(spacing: OracleSpacing.lg) {
                 Text("THE VOID HAS NOT YET ECHOED")
@@ -730,9 +727,8 @@ private struct HistoryEmptyStateView: View {
                 .buttonStyle(OraclePrimaryButtonStyle(mode: .oracle))
                 .padding(.top, OracleSpacing.md)
             }
-
-            Spacer(minLength: 120)
         }
         .padding(.horizontal, OracleSpacing.lg)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
