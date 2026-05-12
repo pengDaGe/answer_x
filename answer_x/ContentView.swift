@@ -654,81 +654,94 @@ private struct HistoryEmptyStateView: View {
     let onStartDivination: () -> Void
 
     var body: some View {
-        VStack(spacing: OracleSpacing.xxl) {
-            ZStack {
-                Circle()
-                    .fill(OracleColor.primaryDim.opacity(0.12))
-                    .frame(width: 280, height: 280)
-                    .blur(radius: 90)
+        GeometryReader { proxy in
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 0) {
+                    Spacer(minLength: 0)
 
-                Circle()
-                    .stroke(OracleColor.onSurface.opacity(0.10), lineWidth: 1)
-                    .frame(width: 188, height: 188)
+                    VStack(spacing: OracleSpacing.xxl) {
+                        ZStack {
+                            Circle()
+                                .fill(OracleColor.primaryDim.opacity(0.12))
+                                .frame(width: 280, height: 280)
+                                .blur(radius: 90)
 
-                Circle()
-                    .stroke(OracleColor.primary.opacity(0.20), lineWidth: 1)
-                    .frame(width: 126, height: 126)
+                            Circle()
+                                .stroke(OracleColor.onSurface.opacity(0.10), lineWidth: 1)
+                                .frame(width: 188, height: 188)
 
-                Circle()
-                    .stroke(OracleColor.secondary.opacity(0.12), lineWidth: 1)
-                    .frame(width: 74, height: 74)
+                            Circle()
+                                .stroke(OracleColor.primary.opacity(0.20), lineWidth: 1)
+                                .frame(width: 126, height: 126)
 
-                Image(systemName: "triangle.fill")
-                    .font(.system(size: 42, weight: .medium))
-                    .foregroundStyle(OracleColor.primaryDim.opacity(0.8))
+                            Circle()
+                                .stroke(OracleColor.secondary.opacity(0.12), lineWidth: 1)
+                                .frame(width: 74, height: 74)
 
-                Circle()
-                    .fill(OracleColor.primaryFixed.opacity(0.65))
-                    .frame(width: 10, height: 10)
-                    .blur(radius: 1.2)
-                    .offset(x: -74, y: -54)
+                            Image(systemName: "triangle.fill")
+                                .font(.system(size: 42, weight: .medium))
+                                .foregroundStyle(OracleColor.primaryDim.opacity(0.8))
 
-                Circle()
-                    .fill(OracleColor.secondary.opacity(0.36))
-                    .frame(width: 6, height: 6)
-                    .blur(radius: 1.2)
-                    .offset(x: 68, y: 66)
-            }
+                            Circle()
+                                .fill(OracleColor.primaryFixed.opacity(0.65))
+                                .frame(width: 10, height: 10)
+                                .blur(radius: 1.2)
+                                .offset(x: -74, y: -54)
 
-            VStack(spacing: OracleSpacing.lg) {
-                Text("THE VOID HAS NOT YET ECHOED")
-                    .font(OracleTypography.displayMedium())
-                    .foregroundStyle(
-                        LinearGradient(
-                            colors: [OracleColor.onSurface, OracleColor.onSurfaceVariant],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .lineLimit(nil)
-                    .minimumScaleFactor(1)
-                    .frame(maxWidth: 360)
+                            Circle()
+                                .fill(OracleColor.secondary.opacity(0.36))
+                                .frame(width: 6, height: 6)
+                                .blur(radius: 1.2)
+                                .offset(x: 68, y: 66)
+                        }
 
-                Text("Your divination history will converge here. Why not pose a question to the cosmos first?")
-                    .font(OracleTypography.bodyLarge())
-                    .foregroundStyle(OracleColor.onSurfaceVariant.opacity(0.82))
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: 340)
+                        VStack(spacing: OracleSpacing.lg) {
+                            Text("THE VOID HAS NOT YET ECHOED")
+                                .font(OracleTypography.displayMedium())
+                                .foregroundStyle(
+                                    LinearGradient(
+                                        colors: [OracleColor.onSurface, OracleColor.onSurfaceVariant],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .multilineTextAlignment(.center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineLimit(nil)
+                                .minimumScaleFactor(1)
+                                .frame(maxWidth: 360)
 
-                Button {
-                    onStartDivination()
-                } label: {
-                    HStack(spacing: OracleSpacing.sm) {
-                        Image(systemName: "sparkles")
-                            .font(.system(size: 16, weight: .bold))
-                        Text("START DIVINATION")
-                            .tracking(2)
+                            Text("Your divination history will converge here. Why not pose a question to the cosmos first?")
+                                .font(OracleTypography.bodyLarge())
+                                .foregroundStyle(OracleColor.onSurfaceVariant.opacity(0.82))
+                                .multilineTextAlignment(.center)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(maxWidth: 340)
+
+                            Button {
+                                onStartDivination()
+                            } label: {
+                                HStack(spacing: OracleSpacing.sm) {
+                                    Image(systemName: "sparkles")
+                                        .font(.system(size: 16, weight: .bold))
+                                    Text("START DIVINATION")
+                                        .tracking(2)
+                                }
+                                .frame(maxWidth: 300)
+                            }
+                            .buttonStyle(OraclePrimaryButtonStyle(mode: .oracle))
+                            .padding(.top, OracleSpacing.md)
+                        }
                     }
-                    .frame(maxWidth: 300)
+                    .padding(.vertical, OracleSpacing.lg)
+
+                    Spacer(minLength: 0)
                 }
-                .buttonStyle(OraclePrimaryButtonStyle(mode: .oracle))
-                .padding(.top, OracleSpacing.md)
+                .frame(maxWidth: .infinity)
+                .frame(minHeight: proxy.size.height)
+                .padding(.horizontal, OracleSpacing.lg)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .padding(.horizontal, OracleSpacing.lg)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
